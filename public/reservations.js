@@ -9,6 +9,7 @@ document.getElementById('addRes').addEventListener('click', event => {
     
   })
     .then(({ data }) => {
+      
       alert('success')
     })
     .catch(err => console.error(err))

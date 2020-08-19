@@ -1,8 +1,7 @@
 
 axios.get('/api/tables')
-  .then(({ data }) => {
-    console.log(data)
-    data.forEach(table => {
+  .then(res => {
+    res.data.forEach(table => {
       let itemElem = document.createElement('li')
       itemElem.innerHTML = `
       <div>
