@@ -8,6 +8,10 @@ router.get('/reservations', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'reservations.html'))
 })
 
+router.get('/test', (req,res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'test.html'))
+})
+
 
 router.get('/*', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'index.html'))

@@ -1,14 +1,17 @@
-
+let currentIndex = 0
 axios.get('/api/tables')
   .then(res => {
+
     res.data.forEach(table => {
+      currentIndex++
       let itemElem = document.createElement('li')
       itemElem.innerHTML = `
       <div>
         <p>
-          Name: ${table.name}
-          Email: ${table.email}
-          Phone: ${table.phone}
+          Table: ${currentIndex} <br>
+          Name: ${table.name} <br>
+          Email: ${table.email} <br>
+          Phone: ${table.phone} <br>
           ID: ${table.id}
         </p>   
       </div>
